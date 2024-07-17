@@ -1,0 +1,12 @@
+initial_bill = input("What was you bill?")
+tip_amount = input("How much would you like to tip? 10, 15, 20?")
+number_to_split = input("With how many people to split the bill?")
+split_int = int(number_to_split)
+bill_total_float = float(initial_bill)
+tip_amount_percent = int(tip_amount) / 100
+tip_cash = round(bill_total_float * tip_amount_percent, 2)
+true_bill_total = round(bill_total_float + tip_cash, 2)
+individual_bill_to_pay = round(true_bill_total / split_int, 2)
+print(f"Your tip of {tip_amount}% adds ${tip_cash} to your total bill.")
+print(f"Your total amount plus tip is ${true_bill_total}.")
+print(f"Split amongst {split_int}, each person must pay ${individual_bill_to_pay} to close out the bill.")
